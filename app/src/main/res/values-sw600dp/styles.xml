@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RecyclerViewStyle">
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+</resources>

@@ -1,0 +1,47 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="title_activity_detail">Detalhes</string>
+
+
+    <string name="pref_location_label">Localização</string>
+
+    <string name="title_activity_settings">Configurações</string>
+    <string name="pref_units_label">Unidade de temperatura</string>
+    <string name="pref_units_label_metric">Métrico</string>
+    <string name="pref_units_label_imperial">Imperial</string>
+    <string name="today">Hoje</string>
+
+    <string name="north">N</string>
+    <string name="south">S</string>
+    <string name="west">O</string>
+    <string name="east">L</string>
+    <string name="north_east">ND</string>
+    <string name="south_east">SD</string>
+    <string name="north_west">NO</string>
+    <string name="south_west">SO</string>
+
+    <!-- Date label when displaying tomorrow's weather forecast [CHAR LIMIT=20] -->
+    <string name="tomorrow">Amanhã</string>
+
+    <string name="format_wind_mph">
+        Vento: <xliff:g id="speed">%1$1.0f</xliff:g> mph <xliff:g id="direction">%2$s</xliff:g>
+    </string>
+
+    <!-- Wind in kph [CHAR LIMIT=25] -->
+    <string name="format_wind_kmh">
+        Vento: <xliff:g id="speed">%1$1.0f</xliff:g> km/h <xliff:g id="direction">%2$s</xliff:g>
+    </string>
+
+    <!-- Pressure format CHAR LIMIT=25] -->
+    <string name="format_pressure">Pressão: <xliff:g id="pressure">%1.0f</xliff:g> hPa</string>
+
+    <!-- Humidity format CHAR LIMIT=25]-->
+    <string name="format_humidity">Humidade: <xliff:g id="humidity">%1.0f</xliff:g> %%</string>
+    <string name="pref_enable_notifications_false">Desabilitado</string>
+    <string name="pref_enable_notifications_label">Notificações</string>
+    <string name="pref_enable_notifications_true">Habilitado</string>
+    <string name="format_notification">Clima: <xliff:g id="condition">%1$s</xliff:g> Alto: <xliff:g id="high">%2$s</xliff:g> Baixo: <xliff:g id="low">%3$s</xliff:g></string>
+    <string name="open_map">Abrir o Mapa</string>
+    <string name="refresh">Atualizar</string>
+    <string name="weather_condition">Condição do tempo %s</string>
+
+</resources>
