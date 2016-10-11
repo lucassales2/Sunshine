@@ -3,133 +3,133 @@
 <layout>
 
     <data>
+
         <variable
             name="forecastDetail"
             type="app.sunshine.android.example.com.sunshine.viewmodels.ForecastDetailViewModel" />
-
-        <import type="app.sunshine.android.example.com.sunshine.Utility"/>
     </data>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:gravity="center_vertical"
-        android:layout_gravity="left"
-        android:layout_height="wrap_content"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <!-- Header: Day, Date -->
-        <TextView
-            android:fontFamily="sans-serif-condensed"
-            android:id="@+id/detail_day_textview"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@{forecastDetail.friendlyDayString}"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-        <TextView
-            android:fontFamily="sans-serif-condensed"
-            android:id="@+id/detail_date_textview"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textColor="@color/grey_700"
-            android:text="@{forecastDetail.formattedMonthDay}"
-            android:textSize="16sp" />
-
-        <!-- Main content: high, low, art, weather state -->
         <LinearLayout
-            android:gravity="center_horizontal"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
-                android:gravity="left"
-                android:layout_height="wrap_content"
+            <!-- Header: Day, Date -->
+            <TextView
+                android:id="@+id/detail_day_textview"
                 android:layout_width="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@{forecastDetail.friendlyDayString}"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
-                <TextView
-                    android:fontFamily="sans-serif-light"
-                    android:id="@+id/detail_high_textview"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="@{forecastDetail.max}"
-                    android:textSize="96sp" />
+            <TextView
+                android:id="@+id/detail_date_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@{forecastDetail.formattedMonthDay}"
+                android:textColor="@color/grey_700"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/detail_low_textview"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="wrap_content"
+            <!-- Main content: high, low, art, weather state -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:textColor="@color/grey_700"
-                    android:text="@{forecastDetail.min}"
-                    android:textSize="48sp" />
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/detail_high_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@{forecastDetail.max}"
+                        android:textSize="96sp" />
+
+                    <TextView
+                        android:id="@+id/detail_low_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@{forecastDetail.min}"
+                        android:textColor="@color/grey_700"
+                        android:textSize="48sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/detail_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/detail_forecast_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{forecastDetail.desc}"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/grey_700" />
+                </LinearLayout>
             </LinearLayout>
 
+            <!-- Humidity, wind, pressure -->
             <LinearLayout
-                android:gravity="center_horizontal"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="16dp"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/detail_icon"
+                <TextView
+                    android:id="@+id/detail_humidity_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{forecastDetail.humidity}"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/detail_pressure_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@{forecastDetail.pressure}"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/detail_wind_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@{forecastDetail.wind}"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <app.sunshine.android.example.com.sunshine.ui.Comprass
+                    android:id="@+id/comprass_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/detail_forecast_textview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{forecastDetail.desc}"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="@color/grey_700" />
             </LinearLayout>
         </LinearLayout>
-
-        <!-- Humidity, wind, pressure -->
-        <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/detail_humidity_textview"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="@{forecastDetail.humidity}"
-                android:textAppearance="?android:textAppearanceLarge" />
-
-            <TextView
-                android:id="@+id/detail_pressure_textview"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_width="match_parent"
-                android:text="@{forecastDetail.pressure}"
-                android:textAppearance="?android:textAppearanceLarge" />
-
-            <TextView
-                android:id="@+id/detail_wind_textview"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_width="match_parent"
-                android:text="@{forecastDetail.wind}"
-                android:textAppearance="?android:textAppearanceLarge" />
-            <app.sunshine.android.example.com.sunshine.ui.Comprass
-                android:id="@+id/comprass_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </layout>
